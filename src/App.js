@@ -1,12 +1,9 @@
 import React from 'react';
+import Routes from './routes/Routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Game of Thrones
-      </header>
-    </div>
+   <Routes />
   );
 }
 
