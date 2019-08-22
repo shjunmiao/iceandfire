@@ -33,10 +33,8 @@ class HouseCardContainer extends Component {
     this.setState(prevState => ({
       swornMembers: [...prevState.swornMembers, name],
     }));
-    console.log('sworn members', this.state.swornMembers);
   }
   handleHeirResp = (char) => {
-    console.log('heir name', char.name);
     this.setState({
       heir: char.name,
     })
