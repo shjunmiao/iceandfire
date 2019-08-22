@@ -19,7 +19,7 @@ const HouseCard = (props) => {
   const diedOutStatusIcon = diedOut !== '' ? diedOutIcon : notDiedOutIcon;
   const diedOutStatusIconTitle = diedOut !== '' ? 'Died out' : 'Not died out';
   return (
-    <Card className="housecard mx-3" onClick={handleModal}>
+    <Card className="housecard mx-3 mb-3" onClick={handleModal}>
       <Card.Title className="mt-4 mx-2 text-center">
         {name}
       </Card.Title>
