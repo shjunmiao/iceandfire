@@ -29,11 +29,12 @@ class HouseCardContainer extends Component {
     })
   }
   handleCharsResp = (char) => {
-    const name = char.name || 'no-name';
+    const name = char.name || char.aliases[0];
     this.setState(prevState => ({
       swornMembers: [...prevState.swornMembers, name],
     }));
   }
+
   handleHeirResp = (char) => {
     this.setState({
       heir: char.name,
