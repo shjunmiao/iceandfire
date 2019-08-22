@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
+import InfoRow from '../InfoRow';
 import diedOutIcon from '../../images/diedout.svg';
 import notDiedOutIcon from '../../images/nodiedout.svg';
 import '../HouseCard/style/housecard.scss';
@@ -26,10 +27,9 @@ const HouseCard = (props) => {
         <div>
           <span className="h6">Region:</span> {region || 'N/A'}
         </div>
-        <div className="mt-2">
-          <span className="h6">DiedOut: </span>
+        <InfoRow label="DiedOut">
           <Image src={diedOutStatusIcon} title={diedOutStatusIconTitle} className="icon__diedout" />
-        </div>
+        </InfoRow>
         <div className="mt-2">
           <div className="h6 mb-0">Coat of Arms description: </div>
           <p>{coatOfArms || 'N/A'}</p>
