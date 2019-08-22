@@ -10,7 +10,7 @@ const HouseCard = (props) => {
   const {
     name,
     region,
-    coatArmsDesc,
+    coatOfArms,
     diedOut,
   } = props.house;
 
@@ -18,8 +18,8 @@ const HouseCard = (props) => {
 
   const diedOutStatusIcon = diedOut !== '' ? diedOutIcon : notDiedOutIcon;
   return (
-    <Card className="housecard">
-      <Card.Title className="mx-auto mt-4">
+    <Card className="housecard mx-3">
+      <Card.Title className="mt-4 mx-2 text-center">
         {name}
       </Card.Title>
       <Card.Body className="mx-4">
@@ -32,7 +32,7 @@ const HouseCard = (props) => {
         </div>
         <div className="mt-2">
           <div className="h6 mb-0">Coat of Arms: </div>
-          <p>{coatArmsDesc}</p>
+          <p>{coatOfArms}</p>
         </div>
       </Card.Body>
     </Card>

@@ -63,11 +63,10 @@ class HouseViewer extends Component {
     }
 
     return (
-      <div style={ { margin: '20px'}}>
-        <div>
-          <HouseCardList houseList={houseList} />
-        </div>
-        {this.state.hasMore ? <Button variant="link" onClick={this.handleShowMore}>Show More...</Button> : ''}
+      <div className="container-fluid mt-5">
+        <HouseCardList houseList={houseList} />
+        {this.state.hasMore ?
+          <div className="text-center mb-5"><Button variant="link" className="mt-3" onClick={this.handleShowMore}>Show More...</Button></div>: ''}
       </div>
     )
   }
