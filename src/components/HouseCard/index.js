@@ -27,7 +27,7 @@ const HouseCard = (props) => {
         <div>
           <span className="h6">Region:</span> {region || 'N/A'}
         </div>
-        <InfoRow label="DiedOut">
+        <InfoRow label="Died Out">
           <Image src={diedOutStatusIcon} title={diedOutStatusIconTitle} className="icon__diedout" />
         </InfoRow>
         <div className="mt-2">
