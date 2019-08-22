@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getHouses } from '../api';
 import Button from 'react-bootstrap/Button';
+import HouseCardList from '../components/HouseCardList';
 
 const PAGE_SIZE = 5;
 
@@ -41,8 +42,7 @@ class HouseViewer extends Component {
   }
 
   componentDidMount() {
-    // fetch first page, fetch one more item to determine if need to display show more button
-    getHouses({page: this.state.page, pageSize: PAGE_SIZE}, this.handleGetHouses, this.handleGetHousesError);
+    getHouses({page: this.state.page, pageSize: PAGE_SIZE }, this.handleGetHouses, this.handleGetHousesError);
   }
 
   render() {
@@ -63,8 +63,10 @@ class HouseViewer extends Component {
     }
 
     return (
-      <div>
-        {houseList.map(house => (<div>{JSON.stringify(house)}</div>))}
+      <div style={ { margin: '20px'}}>
+        <div>
+          <HouseCardList houseList={houseList} />
+        </div>
         {this.state.hasMore ? <Button variant="link" onClick={this.handleShowMore}>Show More...</Button> : ''}
       </div>
     )
