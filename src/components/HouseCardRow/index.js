@@ -3,7 +3,6 @@ import HouseCard from '../HouseCard';
 import './style/housecardrow.scss';
 
 const HouseCardRow = ({houseList}) => {
-  console.log('house row list', houseList);
   if(houseList) {
     return (
       <div className="housecardrow mt-5">

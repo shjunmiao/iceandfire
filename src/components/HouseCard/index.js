@@ -17,6 +17,7 @@ const HouseCard = (props) => {
   console.log('died out', diedOut);
 
   const diedOutStatusIcon = diedOut !== '' ? diedOutIcon : notDiedOutIcon;
+  const diedOutStatusIconTitle = diedOut !== '' ? 'Died out' : 'Not died out';
   return (
     <Card className="housecard mx-3">
       <Card.Title className="mt-4 mx-2 text-center">
@@ -24,15 +25,15 @@ const HouseCard = (props) => {
       </Card.Title>
       <Card.Body className="mx-4">
         <div>
-          <span className="h6">Region:</span> {region}
+          <span className="h6">Region:</span> {region || 'N/A'}
         </div>
         <div className="mt-2">
           <span className="h6">DiedOut: </span>
-          <Image src={diedOutStatusIcon} className="icon__diedout" />
+          <Image src={diedOutStatusIcon} title={diedOutStatusIconTitle} className="icon__diedout" />
         </div>
         <div className="mt-2">
-          <div className="h6 mb-0">Coat of Arms: </div>
-          <p>{coatOfArms}</p>
+          <div className="h6 mb-0">Coat of Arms description: </div>
+          <p>{coatOfArms || 'N/A'}</p>
         </div>
       </Card.Body>
     </Card>
