@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
+import HouseViewer from '../containers/HouseViewer';
+
 
 const HomePage = () => (
   <div>
-    <Header />
-
+    <Header title='Games of Thrones' />
+    <HouseViewer />
   </div>
 )
 
