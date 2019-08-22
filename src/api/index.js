@@ -8,4 +8,7 @@ const getHouses = (query, handleResp, handleErr, isFromShowMore) => {
   doGet(endpoint, query, handleResp, handleErr, isFromShowMore);
 };
 
-export { getHouses };
+const get = (url, handleResp, handleErr) => {
+  doGet(url, '', handleResp, handleErr);
+}
+export { getHouses, get };

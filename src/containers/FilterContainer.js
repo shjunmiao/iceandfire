@@ -20,7 +20,6 @@ class FilterContainer extends Component {
     } else if (e.target.name === 'nodieout'){
       dieoutFilter = false;
     }
-    console.log('died out filter ', dieoutFilter);
     this.props.handleFilter(dieoutFilter);
   }
 

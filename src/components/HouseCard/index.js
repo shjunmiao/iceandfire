@@ -7,19 +7,18 @@ import notDiedOutIcon from '../../images/nodiedout.svg';
 import '../HouseCard/style/housecard.scss';
 
 const HouseCard = (props) => {
+  const { house, handleModal } = props;
   const {
     name,
     region,
     coatOfArms,
     diedOut,
-  } = props.house;
-
-  console.log('died out', diedOut);
+  } = house;
 
   const diedOutStatusIcon = diedOut !== '' ? diedOutIcon : notDiedOutIcon;
   const diedOutStatusIconTitle = diedOut !== '' ? 'Died out' : 'Not died out';
   return (
-    <Card className="housecard mx-3">
+    <Card className="housecard mx-3" onClick={handleModal}>
       <Card.Title className="mt-4 mx-2 text-center">
         {name}
       </Card.Title>
