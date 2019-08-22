@@ -4,14 +4,10 @@ import HomePage from '../pages/HomePage';
 
 const Routes = () => {
   return (
-    <div>
-      <Router>
-        <div>
-          <Redirect from="*" to="/" />
-          <Route path="/" exact component={HomePage} />
-        </div>
-      </Router>
-    </div>
+    <Router>
+      <Redirect from="*" to="/" />
+      <Route path="/" exact component={HomePage} />
+    </Router>
   )
 }
 
