@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import InfoRow from '../InfoRow';
 
 const HouseCardModal = (props) => {
-  const { house, onHide, heir, overlord, swornMembers } = props;
+  const { house, onHide, heir, overlord, swornmembers } = props;
   return (
     <Modal
         {...props}
@@ -23,7 +23,7 @@ const HouseCardModal = (props) => {
           {heir ? <InfoRow label="Heir">{heir}</InfoRow>  : ''}
           {(house.ancestralWeapons && house.ancestralWeapons.join('')) ? (<InfoRow label="Ancestral Weapons" nextLine>{house.ancestralWeapons}</InfoRow>) : ''}
           {overlord ? <InfoRow label="Overlord">{overlord}</InfoRow> : ''}
-          {swornMembers && swornMembers.length > 0 ? <InfoRow label="Sworn Members">{swornMembers.join(', ')}</InfoRow>  : ''}
+          {swornmembers && swornmembers.length > 0 ? <InfoRow label="Sworn Members">{swornmembers.join(', ')}</InfoRow>  : ''}
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={onHide}>Close</Button>

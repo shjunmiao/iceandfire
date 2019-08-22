@@ -4,7 +4,7 @@ import { splitEvery } from 'ramda';
 
 const HouseCardList = ({houseList}) =>{
   if(houseList) {
-    return splitEvery(5, houseList).map(houseRowList => (<HouseCardRow houseList={houseRowList} />))
+    return splitEvery(5, houseList).map((houseRowList, index) => (<HouseCardRow key={`houseRow${index}`} houseList={houseRowList} />))
   } else {
     return '';
   }

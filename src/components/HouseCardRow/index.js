@@ -6,7 +6,7 @@ const HouseCardRow = ({houseList}) => {
   if(houseList) {
     return (
       <div className="housecardrow mt-5">
-        {houseList.map(house => <HouseCardContainer house={house} />)}
+        {houseList.map((house, index) => <HouseCardContainer key={`houseCard${index}`} house={house} />)}
       </div>
     )
   }else {

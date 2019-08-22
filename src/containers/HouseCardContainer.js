@@ -72,7 +72,7 @@ class HouseCardContainer extends Component {
           house={house}
           overload={this.state.overlord}
           heir={this.state.heir}
-          swornMembers={this.state.swornMembers} />
+          swornmembers={this.state.swornMembers} />
       </>
     )
   };
